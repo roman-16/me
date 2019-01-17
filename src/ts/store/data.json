@@ -1,0 +1,28 @@
+{
+  "hero": {
+    "title": "Hi, I'm Roman",
+    "subtitle": "and I'm a web developer"
+  },
+  "skills": [
+    {
+      "name": "Typescript",
+      "knowledgeInPercentage": 90
+    },
+    {
+      "name": "C#",
+      "knowledgeInPercentage": 80
+    },
+    {
+      "name": "Java",
+      "knowledgeInPercentage": 80
+    },
+    {
+      "name": "React.js",
+      "knowledgeInPercentage": 70
+    },
+    {
+      "name": "GraphQL",
+      "knowledgeInPercentage": 50
+    }
+  ]
+}
