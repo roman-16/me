@@ -1,20 +1,19 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { boolean } from "@storybook/addon-knobs";
-import Collapsible from ".";
+import Accordion from ".";
 
-const stories = storiesOf("Collapsible", module);
+const stories = storiesOf("Accordion", module);
 
 stories.add("some text", () => (
-    <Collapsible isActive={boolean("is active", true)}>
+    <Accordion>
       <p>This is the collapsible content. It can be any element or React component you like.</p>
       <p>It can even be another Collapsible component. Check out the next section!</p>
-    </Collapsible>
+    </Accordion>
   ));
 
 stories.add("some image", () => (
-  <Collapsible isActive={boolean("is active", true)}>
+  <Accordion>
     <p>This is the collapsible content. It can be any element or React component you like.</p>
     <img src="http://lorempixel.com/400/400/cats/" />
-  </Collapsible>
+  </Accordion>
 ));
