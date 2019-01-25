@@ -14,6 +14,13 @@ interface Props extends React.HTMLProps<HTMLDivElement> {
 export default class extends React.Component<Props> {
   private collapsibleRef = React.createRef<HTMLDivElement>();
 
+  public componentDidMount() {
+    // Set height to 0px on mount without an animation
+    if (this.collapsibleRef.current && !this.props.isActive) {
+      this.collapsibleRef.current.style.height = "0px";
+    }
+  }
+
   public render() {
     const { isActive, ...newProps } = this.props;
 
@@ -28,13 +35,13 @@ export default class extends React.Component<Props> {
         ref.style.transition = "";
 
         requestAnimationFrame(() => {
-          ref.style.height = ref.scrollHeight + "px";
-          ref.style.transition = elementTransition;
+            ref.style.height = ref.scrollHeight + "px";
+            ref.style.transition = elementTransition;
 
-          requestAnimationFrame(() => {
-            ref.style.height = "0px";
+            requestAnimationFrame(() => {
+                ref.style.height = "0px";
+              });
           });
-        });
       }
     }
 
