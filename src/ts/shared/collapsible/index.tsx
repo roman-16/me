@@ -1,29 +1,52 @@
 import React from "react";
 import styled from "./../../theme";
 
-const Dropdown = styled.div<Props>`
-    ${
-      props => props.isActive ?
-        `transition: font-size .25s, opacity .5s .25s;`
-      :
-        `font-size: 0;
-         opacity: 0;
-         transition: opacity .25s, font-size .5s .25s;`
-    }
+const Collapsible = styled.div`
+    overflow: hidden;
+    height: auto;
+    transition: height ${props => props.theme.transition.speed};
   `;
 
 interface Props extends React.HTMLProps<HTMLDivElement> {
   isActive?: boolean;
 }
 
-export default (props: Props) => {
-  const { isActive, ...newProps } = props;
+export default class extends React.Component<Props> {
+  private collapsibleRef = React.createRef<HTMLDivElement>();
 
-  return (
-    <div {...newProps}>
-      <Dropdown isActive={isActive}>
-        {props.children}
-      </Dropdown>
-    </div>
-  );
+  public render() {
+    const { isActive, ...newProps } = this.props;
+
+    if (this.collapsibleRef.current) {
+      const ref = this.collapsibleRef.current;
+
+      if (isActive) {
+        ref.style.height = ref.scrollHeight + "px";
+      } else {
+        const elementTransition = ref.style.transition;
+
+        ref.style.transition = "";
+
+        requestAnimationFrame(() => {
+          ref.style.height = ref.scrollHeight + "px";
+          ref.style.transition = elementTransition;
+
+          requestAnimationFrame(() => {
+            ref.style.height = "0px";
+          });
+        });
+      }
+    }
+
+    return (
+      <div {...newProps}>
+        <Collapsible ref={this.collapsibleRef} onTransitionEnd={(ev) => {
+            if (ev.currentTarget.style.height !== "0px")
+              ev.currentTarget.style.height = null;
+          }}>
+          {newProps.children}
+        </Collapsible>
+      </div>
+    );
+  }
 }
