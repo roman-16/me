@@ -24,12 +24,16 @@ const initialVariables = {
     red: "#9b001f"
   },
   transition: {
-    time: "400ms"
+    speed: "400ms"
   }
 }
 
 const theme = {
+  ...initialVariables,
+
   colors: {
+    ...initialVariables.colors,
+
     primary: initialVariables.colors.orange,
     info: initialVariables.colors.cyan,
     success: initialVariables.colors.green,
@@ -37,9 +41,7 @@ const theme = {
     danger: initialVariables.colors.red,
 
     light: initialVariables.colors.whiteTer,
-    dark: initialVariables.colors.greyDarker,
-
-    ...initialVariables.colors
+    dark: initialVariables.colors.greyDarker
   }
 };
 
