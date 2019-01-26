@@ -1,4 +1,4 @@
-import Accordion from "./accordion";
+import Accordion, { Accordions } from "./accordion";
 import Collapsible from "./collapsible";
 
-export { Accordion, Collapsible };
+export { Accordion, Accordions, Collapsible };
