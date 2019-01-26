@@ -3,7 +3,7 @@ import styled from "./../../theme";
 
 const Collapsible = styled.div`
     overflow: hidden;
-    height: auto;
+    height: 0px;
     transition: height ${props => props.theme.transition.speed};
   `;
 
@@ -16,8 +16,8 @@ export default class extends React.Component<Props> {
 
   public componentDidMount() {
     // Set height to 0px on mount without an animation
-    if (this.collapsibleRef.current && !this.props.isActive) {
-      this.collapsibleRef.current.style.height = "0px";
+    if (this.collapsibleRef.current && this.props.isActive) {
+      this.collapsibleRef.current.style.height = "auto";
     }
   }
 
@@ -47,13 +47,15 @@ export default class extends React.Component<Props> {
 
     return (
       <div {...newProps}>
-        <Collapsible ref={this.collapsibleRef} onTransitionEnd={(ev) => {
-            if (ev.currentTarget.style.height !== "0px")
-              ev.currentTarget.style.height = null;
-          }}>
+        <Collapsible ref={this.collapsibleRef} onTransitionEnd={this.transitionEnd}>
           {newProps.children}
         </Collapsible>
       </div>
     );
+  }
+
+  private transitionEnd = (ev: React.TransitionEvent<HTMLDivElement>) => {
+    if (ev.currentTarget.style.height !== "0px")
+      ev.currentTarget.style.height = "auto";
   }
 }
