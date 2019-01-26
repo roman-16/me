@@ -6,7 +6,14 @@
   "skills": [
     {
       "name": "Typescript",
-      "knowledgeInPercentage": 90
+      "knowledgeInPercentage": 90,
+      "projects": [
+        {
+          "name": "QuickSearch",
+          "description": "A searchsite to increase the speed and privacy of a search.",
+          "link": "https://github.com/wa4-fearless-otter/QuickSearch"
+        }
+      ]
     },
     {
       "name": "C#",
