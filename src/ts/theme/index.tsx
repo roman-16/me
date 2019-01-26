@@ -16,4 +16,4 @@ const ThemeProvider: React.StatelessComponent = props => (
 );
 
 export default styled;
-export { ThemeProvider, css, keyframes };
+export { ThemeProvider, css, keyframes, theme };
