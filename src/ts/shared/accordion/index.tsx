@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { theme } from "./../../theme";
 import Collapsible from "./../collapsible";
+import { ChevronRight } from "react-feather";
 
 const color = theme.colors.greyLighter;
 
@@ -23,13 +24,9 @@ const HeaderContent = styled.div`
   `;
 
 const Arrow = styled.div<State>`
-    height: 16px;
-    width: 16px;
-    border-right: 2px solid ${color};
-    border-bottom: 2px solid ${color};
-    transform: ${props => props.isOpen ? "rotate(45deg)" : "rotate(-45deg)"};
+    margin-left: -8px;
     transition: transform ${props => props.theme.transition.speed};
-    margin: 0px 16px 0px 4px;
+    ${props => props.isOpen ? "transform: rotate(90deg);" : null}
   `;
 
 interface Props extends React.HTMLProps<HTMLDivElement> {
@@ -53,7 +50,9 @@ export default class extends React.Component<Props, State> {
       <div {...newProps}>
         <Wrapper>
           <Header ref={this.headerRef} onClick={() => this.setState({ isOpen: !this.state.isOpen })}>
-            <Arrow isOpen={this.state.isOpen} />
+            <Arrow isOpen={this.state.isOpen}>
+              <ChevronRight size="50px" color={color} strokeWidth="1" />
+            </Arrow>
             <HeaderContent>{header}</HeaderContent>
           </Header>
           <Collapsible isActive={this.state.isOpen}>
