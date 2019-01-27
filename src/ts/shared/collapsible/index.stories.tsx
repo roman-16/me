@@ -13,8 +13,8 @@ stories.add("some text", () => (
   ));
 
 stories.add("some image", () => (
-  <Collapsible isActive={boolean("is active", true)}>
-    <p>This is the collapsible content. It can be any element or React component you like.</p>
-    <img src="http://lorempixel.com/400/400/cats/" />
-  </Collapsible>
-));
+    <Collapsible isActive={boolean("is active", true)}>
+      <p>This is the collapsible content. It can be any element or React component you like.</p>
+      <img src="http://lorempixel.com/400/400/cats/" />
+    </Collapsible>
+  ));
