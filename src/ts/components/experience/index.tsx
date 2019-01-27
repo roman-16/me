@@ -1,7 +1,6 @@
 import React from "react";
 import Item from "./item";
 import Context from "./../../store";
-import { Accordions } from "./../../shared";
 
 interface Props extends React.HTMLProps<HTMLDivElement> { }
 
@@ -10,9 +9,9 @@ export default (props: Props) => {
     <div {...props}>
       <Context.Consumer>
         {data => (
-          <Accordions>
-            {data.skills.map((skill, i) => <Item key={i} name={skill.name} percentage={skill.knowledgeInPercentage} projects={skill.projects} />)}
-          </Accordions>
+          <div {...props}>
+            {data.experience.map((exp, i) => <Item key={i} imageUrl={exp.imageUrl} name={exp.name} duration={exp.duration} url={exp.url} />)}
+          </div>
         )}
       </Context.Consumer>
     </div>
