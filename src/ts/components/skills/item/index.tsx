@@ -13,7 +13,7 @@ interface Props extends React.HTMLProps<HTMLDivElement> {
   projects?: {
     name: string;
     description: string;
-    link: string;
+    url: string;
   }[];
 }
 
@@ -23,7 +23,7 @@ export default (props: Props) => {
   return (
     <div {...newProps}>
       <Accordion header={(
-        <div className="columns is-vcentered">
+        <div className="columns">
           <div className="column is-3">
             <p className="title">{name}</p>
           </div>
@@ -46,7 +46,7 @@ export default (props: Props) => {
                     </div>
                   </div>
                   <div className="column is-narrow">
-                    <a target="_blank" href={project.link}>
+                    <a target="_blank" href={project.url}>
                       <span className="icon">
                         <ExternalLink />
                       </span>
