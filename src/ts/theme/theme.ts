@@ -1,4 +1,7 @@
 const initialVariables = {
+  breakpoints: {
+    tablet: "769px"
+  },
   colors: {
     black: "#0a0a0a",
     blackBis: "#111111",
