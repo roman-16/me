@@ -2,6 +2,7 @@ import React from "react";
 import Context from "./../../store";
 import styled from "./../../theme";
 import { CenterSection } from "./../../shared";
+import Me from "./../../../images/me.jpg";
 
 const Container = styled.div`
     @media screen and (min-width: ${props => props.theme.breakpoints.tablet}) {
@@ -16,16 +17,14 @@ const Image = styled.img`
     @media screen and (max-width: calc(${props => props.theme.breakpoints.tablet} - 1px)) {
       height: 100vw;
       width: 100vw;
-      background: linear-gradient(to top, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 1)),
-                  url(/me.jpg);
+      background: linear-gradient(to top, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 1)), url(${Me});
       background-size: 100vw;
     }
 
     @media screen and (min-width: ${props => props.theme.breakpoints.tablet}) {
       height: 100vh;
       width: 100vh;
-      background: linear-gradient(to left, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 1)),
-                  url(/me.jpg);
+      background: linear-gradient(to left, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 1)), url(${Me});
       background-size: 100vh;
       float: right;
     }
