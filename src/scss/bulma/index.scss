@@ -4,6 +4,7 @@ $primary: $orange;
 
 @import "~bulma/sass/utilities/_all.sass";
 @import "~bulma/sass/base/_all.sass";
+@import "~bulma/sass/elements/button.sass";
 @import "~bulma/sass/elements/container.sass";
 @import "~bulma/sass/elements/image.sass";
 @import "~bulma/sass/elements/progress.sass";
@@ -14,8 +15,16 @@ $primary: $orange;
 @import "~bulma/sass/layout/section.sass";
 @import "~bulma-tooltip";
 
-.image {
+@mixin center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.image {
+  @include center;
+}
+
+.icon {
+  @include center;
 }
