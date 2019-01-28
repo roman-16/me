@@ -42,14 +42,14 @@ export default (props: Props) => {
             <Container>
               <div className="columns is-vcentered">
                 <div className="column is-narrow">
-                  <p className="title">{value.hero.title}</p>
-                  <p className="subtitle">{value.hero.subtitle}</p>
-                  <a className="button is-primary is-medium is-rounded">
-                    <span>Learn more about me</span>
-                    <span className="icon">
-                      <ArrowRight />
-                    </span>
-                  </a>
+                    <p className="title">{value.hero.title}</p>
+                    <p className="subtitle">{value.hero.subtitle}</p>
+                    <a className="button is-primary is-medium is-rounded" href="#skills">
+                      <span>Learn more about me</span>
+                      <span className="icon">
+                        <ArrowRight />
+                      </span>
+                    </a>
                 </div>
                 <div className="column">
                   <Image />
