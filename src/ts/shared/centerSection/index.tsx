@@ -5,20 +5,21 @@ const Section = styled.div<Props>`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    ${props => props.onlyHorizontal ? null : "align-items: center;"}
     ${props => props.isFullheight ? "min-height: 100vh;" : null}
   `;
 
 interface Props extends React.HTMLProps<HTMLDivElement> {
   isFullheight?: boolean;
+  onlyHorizontal?: boolean;
 }
 
 export default (props: Props) => {
-  const { isFullheight, ...newProps } = props;
+  const { isFullheight, onlyHorizontal, ...newProps } = props;
 
   return (
     <div {...newProps}>
-      <Section isFullheight={isFullheight}>
+      <Section isFullheight={isFullheight} onlyHorizontal={onlyHorizontal}>
         {props.children}
       </Section>
     </div>
