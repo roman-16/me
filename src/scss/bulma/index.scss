@@ -15,16 +15,10 @@ $primary: $orange;
 @import "~bulma/sass/layout/section.sass";
 @import "~bulma-tooltip";
 
-@mixin center {
+.image,
+.icon,
+.is-center {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.image {
-  @include center;
-}
-
-.icon {
-  @include center;
 }

@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import SmoothScroll from "smooth-scroll";
 import App from "./components";
 import Context from "./store";
-import { ThemeProvider } from "./theme";
+import { ThemeProvider, theme } from "./theme";
 import data from "./store/data.json";
 import * as serviceWorker from "./serviceWorker";
 
@@ -13,4 +14,10 @@ ReactDOM.render((
       </ThemeProvider>
     </Context.Provider>
   ), document.getElementById("root"));
+
 serviceWorker.unregister();
+
+new SmoothScroll("[href*=\"#\"]", {
+  speed: 400,
+  updateURL: false
+});
