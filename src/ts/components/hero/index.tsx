@@ -1,4 +1,5 @@
 import React from "react";
+import { ArrowRight } from "react-feather";
 import Context from "./../../store";
 import styled from "./../../theme";
 import { CenterSection } from "./../../shared";
@@ -43,6 +44,12 @@ export default (props: Props) => {
                 <div className="column is-narrow">
                   <p className="title">{value.hero.title}</p>
                   <p className="subtitle">{value.hero.subtitle}</p>
+                  <a className="button is-primary is-medium is-rounded">
+                    <span>Learn more about me</span>
+                    <span className="icon">
+                      <ArrowRight />
+                    </span>
+                  </a>
                 </div>
                 <div className="column">
                   <Image />
