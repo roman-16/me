@@ -55,7 +55,7 @@ export default class extends React.Component<Props, State> {
             </Arrow>
             <HeaderContent>{header}</HeaderContent>
           </Header>
-          <Collapsible isActive={this.state.isOpen}>
+          <Collapsible isOpen={this.state.isOpen}>
             {newProps.children}
           </Collapsible>
         </Wrapper>
