@@ -8,7 +8,7 @@ const Collapsible = styled.div`
   `;
 
 interface Props extends React.HTMLProps<HTMLDivElement> {
-  isActive?: boolean;
+  isOpen?: boolean;
 }
 
 export default class extends React.Component<Props> {
@@ -16,18 +16,18 @@ export default class extends React.Component<Props> {
 
   public componentDidMount() {
     // Set height to 0px on mount without an animation
-    if (this.collapsibleRef.current && this.props.isActive) {
+    if (this.collapsibleRef.current && this.props.isOpen) {
       this.collapsibleRef.current.style.height = "auto";
     }
   }
 
   public render() {
-    const { isActive, ...newProps } = this.props;
+    const { isOpen, ...newProps } = this.props;
 
     if (this.collapsibleRef.current) {
       const ref = this.collapsibleRef.current;
 
-      if (isActive) {
+      if (isOpen) {
         ref.style.height = ref.scrollHeight + "px";
       } else {
         const elementTransition = ref.style.transition;
