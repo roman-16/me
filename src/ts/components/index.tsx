@@ -25,7 +25,7 @@ const Title = styled((props: React.HTMLProps<HTMLDivElement>) => {
     </div>
   );
 })`
-  margin-bottom: 128px;
+  margin-bottom: 10%;
 `;
 
 interface Props extends React.HTMLProps<HTMLDivElement> { }
