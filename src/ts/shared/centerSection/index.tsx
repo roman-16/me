@@ -5,7 +5,7 @@ const Section = styled.div<Props>`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    ${props => props.onlyHorizontal ? null : "align-items: center;"}
+    align-items: ${props => props.onlyHorizontal ? "flex-start" : "center"};
     ${props => props.isFullheight ? "min-height: 100vh;" : null}
   `;
 
