@@ -6,13 +6,14 @@ $primary: $orange;
 @import "~bulma/sass/base/_all.sass";
 @import "~bulma/sass/elements/button.sass";
 @import "~bulma/sass/elements/container.sass";
+@import "~bulma/sass/elements/content.sass";
 @import "~bulma/sass/elements/image.sass";
 @import "~bulma/sass/elements/progress.sass";
 @import "~bulma/sass/elements/title.sass";
 @import "~bulma/sass/components/navbar.sass";
 @import "~bulma/sass/grid/columns.sass";
+@import "~bulma/sass/layout/footer.sass";
 @import "~bulma/sass/layout/hero.sass";
-@import "~bulma/sass/layout/section.sass";
 @import "~bulma-tooltip";
 
 .image,
