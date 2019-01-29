@@ -1,7 +1,8 @@
 {
   "hero": {
     "title": "Hi, I'm Roman",
-    "subtitle": "a developer from Austria"
+    "subtitle": "a developer from Austria",
+    "callToAction": "Learn more about me"
   },
   "skills": [
     {
@@ -42,5 +43,7 @@
       },
       "url": "https://strabag.com"
     }
-  ]
+  ],
+  "footer": {
+  }
 }
