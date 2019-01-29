@@ -6,9 +6,12 @@ import { CenterSection } from "./../../shared";
 import Me from "./../../../images/me.jpg";
 
 const Container = styled.div`
+    @media screen and (max-width: calc(${props => props.theme.breakpoints.tablet} - 1px)) {
+      padding: 32px;
+    }
+
     @media screen and (min-width: ${props => props.theme.breakpoints.tablet}) {
       padding-left: 15%;
-      min-width: 100%;
     }
   `;
 
@@ -38,10 +41,10 @@ export default (props: Props) => {
     <Context.Consumer>
       {value => (
         <div {...props}>
-          <CenterSection isFullheight>
-            <Container>
-              <div className="columns is-vcentered">
-                <div className="column is-narrow">
+          <CenterSection isFullheight onlyHorizontal>
+              <div className="columns is-gapless is-vcentered">
+                <Container>
+                  <div className="column is-narrow">
                     <p className="title">{value.hero.title}</p>
                     <p className="subtitle">{value.hero.subtitle}</p>
                     <a className="button is-primary is-medium is-rounded" href="#skills">
@@ -50,12 +53,12 @@ export default (props: Props) => {
                         <ArrowRight />
                       </span>
                     </a>
-                </div>
+                  </div>
+                </Container>
                 <div className="column">
                   <Image />
                 </div>
               </div>
-            </Container>
           </CenterSection>
         </div>
       )}
