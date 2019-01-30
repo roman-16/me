@@ -7,7 +7,7 @@ import Me from "./../../../images/me.jpg";
 
 const Container = styled.div`
     @media screen and (max-width: calc(${props => props.theme.breakpoints.tablet} - 1px)) {
-      padding: 32px;
+      padding: 10%;
     }
 
     @media screen and (min-width: ${props => props.theme.breakpoints.tablet}) {
@@ -39,16 +39,16 @@ interface Props extends React.HTMLProps<HTMLDivElement> { }
 export default (props: Props) => {
   return (
     <Context.Consumer>
-      {value => (
+      {data => (
         <div {...props}>
           <CenterSection isFullheight onlyHorizontal>
-              <div className="columns is-gapless is-vcentered">
+              <div className="columns is-gapless is-vcentered" style={{ width: "100%" }}>
                 <Container>
                   <div className="column is-narrow">
-                    <p className="title">{value.hero.title}</p>
-                    <p className="subtitle">{value.hero.subtitle}</p>
+                    <p className="title">{data.hero.title}</p>
+                    <p className="subtitle">{data.hero.subtitle}</p>
                     <a className="button is-primary is-medium is-rounded" href="#skills">
-                      <span>Learn more about me</span>
+                      <span>{data.hero.callToAction}</span>
                       <span className="icon">
                         <ArrowRight />
                       </span>
