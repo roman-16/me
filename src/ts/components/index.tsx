@@ -1,9 +1,9 @@
 import React from "react";
-import { Link } from "react-feather";
 import styled from "./../theme";
 import Hero from "./hero";
 import Skills from "./skills";
 import Experience from "./experience";
+import Footer from "./footer";
 import { CenterSection } from "./../shared";
 
 const Section = styled((props: React.HTMLProps<HTMLDivElement>) => {
@@ -15,7 +15,7 @@ const Section = styled((props: React.HTMLProps<HTMLDivElement>) => {
     </div>
   );
 })`
-  padding: 32px;
+  padding: 0px 10%;
 `;
 
 const Title = styled((props: React.HTMLProps<HTMLDivElement>) => {
@@ -25,7 +25,7 @@ const Title = styled((props: React.HTMLProps<HTMLDivElement>) => {
     </div>
   );
 })`
-  margin-bottom: 10%;
+  margin: 10% 0px;
 `;
 
 interface Props extends React.HTMLProps<HTMLDivElement> { }
@@ -42,6 +42,7 @@ export default (props: Props) => {
         <Title>My Experience</Title>
         <Experience />
       </Section>
+      <Footer />
     </div>
   );
 }
