@@ -31,7 +31,7 @@ export default (props: Props) => {
           {duration.endDate ? `${duration.startDate} ... ${duration.endDate}`: duration.startDate}
         </div>
         <div className="column is-narrow">
-          <a target="_blank" href={url}>
+          <a rel="noopener" target="_blank" href={url}>
             <span className="icon">
               <ExternalLink />
             </span>

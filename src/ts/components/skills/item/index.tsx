@@ -46,7 +46,7 @@ export default (props: Props) => {
                     </div>
                   </div>
                   <div className="column is-narrow">
-                    <a target="_blank" href={project.url}>
+                    <a rel="noopener" target="_blank" href={project.url}>
                       <span className="icon">
                         <ExternalLink />
                       </span>
