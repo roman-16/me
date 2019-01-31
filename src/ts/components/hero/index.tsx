@@ -45,7 +45,7 @@ export default (props: Props) => {
     <Context.Consumer>
       {data => (
         <div {...props}>
-          <CenterSection isFullheight onlyHorizontal>
+          <CenterSection noHorizontal>
               <Columns className="columns is-gapless is-vcentered">
                 <Container>
                   <div className="column is-narrow">
