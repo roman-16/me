@@ -4,22 +4,23 @@ import styled from "./../../theme";
 const Section = styled.div<Props>`
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: ${props => props.onlyHorizontal ? "flex-start" : "center"};
+    justify-content: ${props => props.noHorizontal ? "flex-start" : "center"};
+    align-items: ${props => props.noVertical ? "flex-start" : "center"};
     ${props => props.isFullheight ? "min-height: 100vh;" : null}
   `;
 
 interface Props extends React.HTMLProps<HTMLDivElement> {
   isFullheight?: boolean;
-  onlyHorizontal?: boolean;
+  noVertical?: boolean;
+  noHorizontal?: boolean;
 }
 
 export default (props: Props) => {
-  const { isFullheight, onlyHorizontal, ...newProps } = props;
+  const { isFullheight, noVertical, noHorizontal, ...newProps } = props;
 
   return (
     <div {...newProps}>
-      <Section isFullheight={isFullheight} onlyHorizontal={onlyHorizontal}>
+      <Section isFullheight={isFullheight} noVertical={noVertical} noHorizontal={noHorizontal}>
         {props.children}
       </Section>
     </div>
