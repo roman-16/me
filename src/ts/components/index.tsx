@@ -26,9 +26,9 @@ const Title = styled((props: React.HTMLProps<HTMLDivElement>) => {
     </div>
   );
 })`
-  margin: 4% 0px;
+  margin: 8% 0px;
 
-  ${props => props.theme.breakpoints.media.tablet`margin: 8% 0px;`}
+  ${props => props.theme.breakpoints.media.tablet`margin: 24% 0px;`}
 `;
 
 interface Props extends React.HTMLProps<HTMLDivElement> { }
