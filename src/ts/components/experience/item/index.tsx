@@ -5,8 +5,8 @@ interface Props extends React.HTMLProps<HTMLDivElement> {
   name: string;
   imageUrl: string;
   duration: {
-    startDate: string;
-    endDate?: string;
+    start: string;
+    end?: string;
   };
   url: string;
 }
@@ -28,7 +28,7 @@ export default (props: Props) => {
           </div>
         </div>
         <div className="column">
-          {duration.endDate ? `${duration.startDate} ... ${duration.endDate}`: duration.startDate}
+          {duration.end ? `${duration.start} ... ${duration.end}`: duration.start}
         </div>
         <div className="column is-narrow">
           <a rel="noopener" target="_blank" href={url}>
