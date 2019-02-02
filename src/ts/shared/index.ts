@@ -1,5 +1,5 @@
-import Accordion from "./accordion";
-import CenterSection from "./centerSection";
-import Collapsible from "./collapsible";
+import Accordion from "./Accordion";
+import CenterSection from "./CenterSection";
+import Collapsible from "./Collapsible";
 
 export { Accordion, CenterSection, Collapsible };
