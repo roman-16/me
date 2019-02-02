@@ -50,7 +50,7 @@ export default (props: Props) => {
               <Greeter>
                 <p className="title">{data.hero.title}</p>
                 <p className="subtitle">{data.hero.subtitle}</p>
-                <CallToAction text={data.hero.callToAction} />
+                <CallToAction text={data.hero.callToAction} socialLinks={data.hero.socialLinks} />
               </Greeter>
               <div className="column">
                 <Image />

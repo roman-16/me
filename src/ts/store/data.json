@@ -2,7 +2,19 @@
   "hero": {
     "title": "Hi, I'm Roman",
     "subtitle": "a young, aspiring developer from Austria",
-    "callToAction": "Learn more about me"
+    "callToAction": "Learn more about me",
+    "socialLinks": [
+       {
+         "name": "GitHub",
+         "icon": "GitHub",
+         "url": "https://github.com/wa4-fearless-otter"
+       },
+       {
+         "name": "LinkedIn",
+         "icon": "Linkedin",
+         "url": "https://www.linkedin.com/in/roman-lerchster"
+       }
+    ]
   },
   "skills": [
     {
