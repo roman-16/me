@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "./../theme";
-import Hero from "./hero";
-import Skills from "./skills";
-import Experience from "./experience";
-import Footer from "./footer";
+import Hero from "./Hero";
+import Skills from "./Skills";
+import Experience from "./Experience";
+import Footer from "./Footer";
 import { CenterSection } from "./../shared";
 
 const Section = styled((props: React.HTMLProps<HTMLDivElement>) => {
@@ -34,6 +34,10 @@ export default (props: Props) => {
   return (
     <div {...props}>
       <Hero />
+      <Section id="about-me">
+        <Title>About Me</Title>
+        <Skills />
+      </Section>
       <Section id="skills">
         <Title>My Skills</Title>
         <Skills />

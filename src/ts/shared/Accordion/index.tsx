@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { theme } from "./../../theme";
-import Collapsible from "./../collapsible";
+import Collapsible from "./../Collapsible";
 import { ChevronRight } from "react-feather";
 
 const Header = styled.div`
