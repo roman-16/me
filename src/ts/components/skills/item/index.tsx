@@ -24,7 +24,7 @@ export default (props: Props) => {
     <div {...newProps}>
       <Accordion header={(
         <div className="columns">
-          <div className="column is-3">
+          <div className="column is-4">
             <p className="title">{name}</p>
           </div>
           <div className="column">
