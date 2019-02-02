@@ -1,4 +1,5 @@
 import React from "react";
+import { Send } from "react-feather";
 import { Link } from "./../../shared";
 
 interface Props extends React.HTMLProps<HTMLDivElement> { }
@@ -18,6 +19,12 @@ export default (props: Props) => {
         Since then, I've been constantly learning new technologies.
         In my second year of apprenticeship, <Link href="https://strabag.com">Strabag</Link> in <Link href="https://en.wikipedia.org/wiki/Spittal_an_der_Drau">Spittal</Link> hired me, where I finished my apprenticeship and where I am currently working.
       </div>
+      <Link className="button is-primary is-medium is-rounded" href="mailto:rl00@gmx.at">
+        <span>Contact me</span>
+        <span className="icon">
+          <Send />
+        </span>
+      </Link>
     </div>
   );
 }
