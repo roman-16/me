@@ -1,5 +1,6 @@
 import React from "react";
 import Context from "./../../store";
+import { Link } from "./../../shared";
 
 interface Props extends React.HTMLProps<HTMLDivElement> { }
 
@@ -19,8 +20,8 @@ export default class extends React.Component<Props, State> {
           {data => (
             <footer className="footer">
               <div className="content has-text-centered">
-                <h3>Made with ❤️ by <a href="mailto:rl00@gmx.at">me</a>.</h3>
-                I know developers are curious creatures, so here's the <a rel="noopener" target="_blanks" href="https://github.com/wa4-fearless-otter/me">source code</a>.<br />
+                <h3>Made with ❤️ by <Link href="mailto:rl00@gmx.at">me</Link>.</h3>
+                I know developers are curious creatures, so here's the <Link href="https://github.com/wa4-fearless-otter/me">source code</Link>.<br />
               </div>
             </footer>
           )}

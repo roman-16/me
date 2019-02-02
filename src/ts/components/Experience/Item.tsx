@@ -1,5 +1,6 @@
 import React from "react";
 import { ExternalLink } from "react-feather";
+import { Link } from "./../../shared";
 
 interface Props extends React.HTMLProps<HTMLDivElement> {
   name: string;
@@ -31,11 +32,11 @@ export default (props: Props) => {
           {duration.end ? `${duration.start} ... ${duration.end}`: duration.start}
         </div>
         <div className="column is-narrow">
-          <a rel="noopener" target="_blank" href={url}>
+          <Link href={url}>
             <span className="icon">
               <ExternalLink />
             </span>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
