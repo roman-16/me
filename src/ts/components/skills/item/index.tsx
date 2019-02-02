@@ -1,16 +1,53 @@
 import React from "react";
-import { ExternalLink } from "react-feather";
-import styled from "./../../../theme";
+import * as Icons from "react-feather";
+import styled, { css, theme } from "./../../../theme";
+import Header from "./Header";
 import { Accordion } from "./../../../shared";
 
+const color = theme.colors.greyLighter;
+
+const box = css`
+  border-top: 1px solid ${color};
+  border-bottom: 1px solid ${color};
+  margin: -1px 0px;
+`;
+
+const header = css`
+  padding: 32px 0px;
+  margin-bottom: -1px;
+  border-bottom: 1px solid ${color};
+`;
+
+const StyledAccordion = styled(Accordion)`
+    ${box}
+
+    .arrow {
+      color: ${color};
+    }
+
+    .header {
+      ${header}
+    }
+`;
+
+const StyledHeader = styled.div`
+  ${box}
+
+  .header {
+    ${header}
+    margin-left: 50px;
+  }
+`;
+
 const Project = styled.div`
-    padding: 32px;
-  `;
+  padding: 32px;
+`;
 
 interface Props extends React.HTMLProps<HTMLDivElement> {
   name: string;
   percentage: number;
   projects?: {
+    icon: string;
     name: string;
     description: string;
     url: string;
@@ -22,42 +59,46 @@ export default (props: Props) => {
 
   return (
     <div {...newProps}>
-      <Accordion header={(
-        <div className="columns">
-          <div className="column is-4">
-            <p className="title">{name}</p>
-          </div>
-          <div className="column">
-            <div className="tooltip is-tooltip-right is-tooltip-top-touch" data-tooltip={percentage + "%"}>
-              <progress className="progress is-large is-primary" value={percentage} max="100" />
-            </div>
-          </div>
-        </div>)}>
-        {
-          projects ?
-            projects.map((project, i) => (
-              <Project key={i}>
-                <div className="columns">
-                  <div className="column is-narrow">Image</div>
-                  <div className="column">
-                    <div className="content">
-                      <strong>{project.name}</strong><br />
-                      {project.description}
+      {
+        projects ? (
+          <StyledAccordion header={<Header name={name} percentage={percentage} />}>
+            {
+              projects.map((project, i) => {
+                const Icon = Icons[project.icon as keyof typeof Icons];
+
+                return (
+                  <Project key={i}>
+                    <div className="columns">
+                      <div className="column is-narrow">
+                        <span className="icon">
+                          <Icon size="40px" />
+                        </span>
+                      </div>
+                      <div className="column">
+                        <div className="content">
+                          <strong>{project.name}</strong><br />
+                          {project.description}
+                        </div>
+                      </div>
+                      <div className="column is-narrow">
+                        <a rel="noopener" target="_blank" href={project.url}>
+                          <span className="icon">
+                            <Icons.ExternalLink />
+                          </span>
+                        </a>
+                      </div>
                     </div>
-                  </div>
-                  <div className="column is-narrow">
-                    <a rel="noopener" target="_blank" href={project.url}>
-                      <span className="icon">
-                        <ExternalLink />
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </Project>
-            )) :
-            null
-        }
-      </Accordion>
+                  </Project>
+                );
+              })
+            }
+          </StyledAccordion>
+        ) : (
+          <StyledHeader>
+            <Header className="header" name={name} percentage={percentage} />
+          </StyledHeader>
+        )
+      }
     </div>
   )
 }
