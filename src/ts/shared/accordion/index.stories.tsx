@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import Accordion, { Accordions } from ".";
+import Accordion from ".";
 
 const stories = storiesOf("Accordion", module);
 
@@ -35,7 +35,7 @@ stories.add("extensive header", () => (
   ));
 
 stories.add("multiple accordions", () => (
-    <Accordions>
+    <div>
       <Accordion header={"Head 1"}>
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam</p>
         <img src="http://lorempixel.com/400/400/cats/" />
@@ -44,5 +44,5 @@ stories.add("multiple accordions", () => (
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam</p>
         <img src="http://lorempixel.com/400/400/cats/" />
       </Accordion>
-    </Accordions>
+    </div>
   ));
