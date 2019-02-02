@@ -1,6 +1,7 @@
 import React from "react";
 import * as Icons from "react-feather";
 import styled from "./../../theme";
+import { Link } from "./../../shared";
 
 const Container = styled.div`
   float: left;
@@ -33,7 +34,7 @@ export default (props: Props) => {
     <div {...newProps}>
       <div className="columns is-gapless">
         <Container className="column is-narrow">
-          <a className="button is-primary is-medium is-rounded" href="#skills">
+          <a className="button is-primary is-medium is-rounded" href="#about-me">
             <span>{text}</span>
             <span className="icon">
               <Icons.ArrowRight />
@@ -47,11 +48,11 @@ export default (props: Props) => {
                 return (
                   <Icon>
                     <div className="tooltip is-tooltip-bottom" data-tooltip={link.name}>
-                      <a rel="noopener" target="_blank" href={link.url}>
+                      <Link href={link.url}>
                         <span className="icon">
                           <SvgIcon size="24px" />
                         </span>
-                      </a>
+                      </Link>
                     </div>
                   </Icon>
                 );

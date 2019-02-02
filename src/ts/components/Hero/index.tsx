@@ -1,5 +1,4 @@
 import React from "react";
-import { ArrowRight, GitHub } from "react-feather";
 import Context from "./../../store";
 import styled from "./../../theme";
 import CallToAction from "./CallToAction";

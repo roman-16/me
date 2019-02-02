@@ -2,7 +2,7 @@ import React from "react";
 import * as Icons from "react-feather";
 import styled, { css, theme } from "./../../../theme";
 import Header from "./Header";
-import { Accordion } from "./../../../shared";
+import { Accordion, Link } from "./../../../shared";
 
 const color = theme.colors.greyLighter;
 
@@ -81,11 +81,11 @@ export default (props: Props) => {
                         </div>
                       </div>
                       <div className="column is-narrow">
-                        <a rel="noopener" target="_blank" href={project.url}>
+                        <Link href={project.url}>
                           <span className="icon">
                             <Icons.ExternalLink />
                           </span>
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </Project>
