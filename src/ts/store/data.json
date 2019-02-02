@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "Hi, I'm Roman",
-    "subtitle": "a developer from Austria",
+    "subtitle": "a young, aspiring developer from Austria",
     "callToAction": "Learn more about me"
   },
   "skills": [
@@ -10,9 +10,28 @@
       "knowledgeInPercentage": 90,
       "projects": [
         {
+          "name": "Me",
+          "icon": "Smile",
+          "description": "A page about me - Roman",
+          "url": "https://github.com/wa4-fearless-otter/me"
+        },
+        {
+          "name": "Tabliss",
+          "icon": "Home",
+          "description": "A pluggable New Tab web extension written in TypeScript, React and Redux. (Contributor)",
+          "url": "https://github.com/joelshepherd/tabliss"
+        },
+        {
           "name": "QuickSearch",
-          "description": "A searchsite to increase the speed and privacy of a search.",
+          "icon": "Search",
+          "description": "A searchsite to increase the speed and privacy of a search. (Archived)",
           "url": "https://github.com/wa4-fearless-otter/QuickSearch"
+        },
+        {
+          "name": "QuickEvent",
+          "icon": "Zap",
+          "description": "Because every object should have the ability to fire an event.",
+          "url": "https://github.com/wa4-fearless-otter/QuickEvent"
         }
       ]
     },
@@ -26,7 +45,21 @@
     },
     {
       "name": "React.js",
-      "knowledgeInPercentage": 70
+      "knowledgeInPercentage": 70,
+      "projects": [
+        {
+          "name": "Me",
+          "icon": "Smile",
+          "description": "A page about me - Roman",
+          "url": "https://github.com/wa4-fearless-otter/me"
+        },
+        {
+          "name": "Tabliss",
+          "icon": "Home",
+          "description": "A pluggable New Tab web extension written in TypeScript, React and Redux. (Contributor)",
+          "url": "https://github.com/joelshepherd/tabliss"
+        }
+      ]
     },
     {
       "name": "GraphQL",
@@ -38,12 +71,10 @@
       "name": "Strabag",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Strabag_SE_Logo_2008.svg/800px-Strabag_SE_Logo_2008.svg.png",
       "duration": {
-        "startDate": "2016-10",
-        "endDate": "present"
+        "start": "10.2016",
+        "end": "present"
       },
       "url": "https://strabag.com"
     }
-  ],
-  "footer": {
-  }
+  ]
 }
