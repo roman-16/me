@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "./../theme";
 import Hero from "./Hero";
+import AboutMe from "./AboutMe";
 import Skills from "./Skills";
 import Experience from "./Experience";
 import Footer from "./Footer";
@@ -15,7 +16,7 @@ const Section = styled((props: React.HTMLProps<HTMLDivElement>) => {
     </div>
   );
 })`
-  padding: 0px 10%;
+  padding: 0px 8%;
 `;
 
 const Title = styled((props: React.HTMLProps<HTMLDivElement>) => {
@@ -25,7 +26,9 @@ const Title = styled((props: React.HTMLProps<HTMLDivElement>) => {
     </div>
   );
 })`
-  margin: 10% 0px;
+  margin: 4% 0px;
+
+  ${props => props.theme.breakpoints.media.tablet`margin: 8% 0px;`}
 `;
 
 interface Props extends React.HTMLProps<HTMLDivElement> { }
@@ -36,7 +39,7 @@ export default (props: Props) => {
       <Hero />
       <Section id="about-me">
         <Title>About Me</Title>
-        <Skills />
+        <AboutMe />
       </Section>
       <Section id="skills">
         <Title>My Skills</Title>

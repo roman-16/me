@@ -5,7 +5,7 @@ import { Link } from "./../../shared";
 
 const Container = styled.div`
   float: left;
-  background-color: ${props => props.theme.colors.greyLighter};
+  background-color: ${props => props.theme.colors.whiteTer};
   border-radius: 24px;
 `;
 
