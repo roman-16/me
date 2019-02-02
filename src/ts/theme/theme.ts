@@ -1,6 +1,14 @@
+import { css } from ".";
+
+const mediaMaxWidth = (size: string) => (args: TemplateStringsArray, ...placeholders: any[]) => css`
+  @media screen and (max-width: ${size}) {
+    ${css(args, placeholders)}
+  }
+`;
+
 const initialVariables = {
   breakpoints: {
-    tablet: "769px"
+    tablet: "768px"
   },
   colors: {
     black: "#0a0a0a",
@@ -33,6 +41,14 @@ const initialVariables = {
 
 const theme = {
   ...initialVariables,
+
+  breakpoints: {
+    ...initialVariables.breakpoints,
+
+    media: {
+      tablet: mediaMaxWidth(initialVariables.breakpoints.tablet)
+    }
+  },
 
   colors: {
     ...initialVariables.colors,
