@@ -10,7 +10,7 @@ export default (props: Props) => {
       <div className="content is-medium">
         I grew up on a farm in the mountains of upper <Link href="https://en.wikipedia.org/wiki/Carinthia">carinthia</Link> (Austria).<br />
         <br />
-        To the surprise of my parents, I always enjoyed spending more time learning about computers than working at our farm.
+        To the surprise of my parents, I always enjoyed spending more time learning about computers, than working at our farm.
         I never thought programming was something I would enjoy.
         At first I have always regarded programming as something very complicated and prehaps a little boring.
         In high school I came in contact, for the first time, with programming (HTML, CSS) and it suited me really well.
