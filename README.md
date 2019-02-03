@@ -1,5 +1,5 @@
 # Me
-My personal [homepage](http://lerchster.at).
+My personal [homepage](https://lerchster.at).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
