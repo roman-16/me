@@ -41,7 +41,7 @@ export default (props: Props) => {
         <Title>About Me</Title>
         <AboutMe />
       </Section>
-      <Section id="skills">
+      <Section>
         <Title>My Skills</Title>
         <Skills />
       </Section>
