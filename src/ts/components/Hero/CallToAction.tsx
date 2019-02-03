@@ -34,12 +34,12 @@ export default (props: Props) => {
     <div {...newProps}>
       <div className="columns is-gapless">
         <Container className="column is-narrow">
-          <a className="button is-primary is-medium is-rounded" href="#about-me">
+          <Link className="button is-primary is-medium is-rounded" href="#about-me">
             <span>{text}</span>
             <span className="icon">
               <Icons.ArrowRight />
             </span>
-          </a>
+          </Link>
           <IconContainer>
             {
               socialLinks.map((link, i) => {
