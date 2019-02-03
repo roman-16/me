@@ -13,6 +13,11 @@
          "name": "LinkedIn",
          "icon": "Linkedin",
          "url": "https://linkedin.com/in/roman-lerchster"
+       },
+       {
+         "name": "Mail",
+         "icon": "Mail",
+         "url": "mailto:rl00@gmx.at"
        }
     ]
   },
