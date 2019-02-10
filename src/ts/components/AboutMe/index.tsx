@@ -12,7 +12,7 @@ export default (props: Props) => {
         <br />
         To the surprise of my parents, I always enjoyed spending more time learning about computers, than working at our farm.
         I never thought programming was something I would enjoy.
-        At first I have always regarded programming as something very complicated and prehaps a little boring.
+        At first I have always regarded programming as something very complicated and perhaps a little boring.
         In high school I came in contact, for the first time, with programming (HTML, CSS) and it suited me really well.
         I began an apprenticeship as a software developer at <Link href="https://itlabs.at">IT-L@B</Link> in <Link href="https://en.wikipedia.org/wiki/Villach">Villach</Link>.
         There I learned the basics of C# and web development.
