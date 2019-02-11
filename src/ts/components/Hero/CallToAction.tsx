@@ -46,7 +46,7 @@ export default (props: Props) => {
                 const SvgIcon = Icons[link.icon as keyof typeof Icons];
 
                 return (
-                  <Icon>
+                  <Icon key={i}>
                     <div className="tooltip is-tooltip-bottom" data-tooltip={link.name}>
                       <Link href={link.url}>
                         <span className="icon">
