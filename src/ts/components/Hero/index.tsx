@@ -1,5 +1,5 @@
 import React from "react";
-import Context from "./../../store";
+import { Context } from "./../../store";
 import styled from "./../../theme";
 import CallToAction from "./CallToAction";
 import { CenterSection } from "./../../shared";

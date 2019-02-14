@@ -2,17 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom";
 import SmoothScroll from "smooth-scroll";
 import App from "./components";
-import Context from "./store";
+import Store from "./store";
 import { ThemeProvider } from "./theme";
-import data from "./store/data.json";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render((
-    <Context.Provider value={data}>
+    <Store language="en">
       <ThemeProvider>
         <App />
       </ThemeProvider>
-    </Context.Provider>
+    </Store>
   ), document.getElementById("root"));
 
 serviceWorker.unregister();

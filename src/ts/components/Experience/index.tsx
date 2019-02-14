@@ -1,6 +1,6 @@
 import React from "react";
 import Item from "./Item";
-import Context from "./../../store";
+import { Context } from "./../../store";
 
 interface Props extends React.HTMLProps<HTMLDivElement> { }
 
