@@ -1,5 +1,5 @@
 import React from "react";
-import Context from "./../../store";
+import { Context } from "./../../store";
 import { Link } from "./../../shared";
 
 interface Props extends React.HTMLProps<HTMLDivElement> { }
