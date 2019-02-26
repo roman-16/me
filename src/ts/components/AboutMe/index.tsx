@@ -17,7 +17,7 @@ export default (props: Props) => {
         I began an apprenticeship as a software developer at <Link href="https://itlabs.at">IT-L@B</Link> in <Link href="https://en.wikipedia.org/wiki/Villach">Villach</Link>.
         There I learned the basics of C# and web development.
         Since then I have been constantly learning new technologies.
-        In my second year of apprenticeship, <Link href="https://strabag.com">Strabag</Link> in <Link href="https://en.wikipedia.org/wiki/Spittal_an_der_Drau">Spittal</Link> hired me, where I finished my apprenticeship and I am currently working at.
+        In my second year of apprenticeship, <Link href="https://strabag.com">Strabag</Link> at <Link href="https://en.wikipedia.org/wiki/Spittal_an_der_Drau">Spittal</Link> hired me, where I finished my apprenticeship and I am currently working at.
       </div>
       <Link className="button is-primary is-medium is-rounded" href="mailto:rl00@gmx.at">
         <span>Contact me</span>
