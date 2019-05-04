@@ -15,6 +15,7 @@
   "dependencies": {
     "bulma": "^0.7.2",
     "bulma-tooltip": "^2.0.2",
+    "dayjs": "^1.8.13",
     "normalize.css": "^8.0.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",

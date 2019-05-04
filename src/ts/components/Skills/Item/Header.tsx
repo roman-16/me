@@ -15,7 +15,7 @@ export default (props: Props) => {
           <p className="title">{name}</p>
         </div>
         <div className="column">
-          <div className="tooltip is-tooltip-right is-tooltip-top-touch" data-tooltip={percentage + "%"}>
+          <div className="tooltip is-tooltip-right is-tooltip-bottom-touch" data-tooltip={percentage + "%"}>
             <progress className="progress is-large is-primary" value={percentage} max="100" />
           </div>
         </div>
