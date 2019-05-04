@@ -20,7 +20,7 @@ ReactDOM.render((
     </Store>
   ), document.getElementById("root"));
 
-serviceWorker.unregister();
+serviceWorker.register();
 
 new SmoothScroll("[href*=\"#\"]", {
   speed: 400,
