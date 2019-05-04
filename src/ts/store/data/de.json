@@ -85,11 +85,20 @@
   ],
   "experience": [
     {
+      "name": "Blue Tomato",
+      "imageUrl": "https://green.blue-tomato.com/presse/logos/normal/png/blue-tomato-2c-black-72dpi-rgb.png",
+      "duration": {
+        "start": "05.2019",
+        "end": "present"
+      },
+      "url": "https://blue-tomato.com"
+    },
+    {
       "name": "Strabag",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Strabag_SE_Logo_2008.svg/800px-Strabag_SE_Logo_2008.svg.png",
       "duration": {
         "start": "10.2016",
-        "end": "present"
+        "end": "04.2019"
       },
       "url": "https://strabag.com"
     }
