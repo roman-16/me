@@ -4,7 +4,7 @@ import dayjs from "dayjs";
 import { Link } from "./../../shared";
 
 function calculateTimeRange(start: string, end?: string) {
-  return dayjs(start, "MM.YYYY").to(dayjs(end ? end : dayjs(), "MM.YYYY"), true);
+  return dayjs(start, "MM.YYYY").to(dayjs(end || dayjs(), "MM.YYYY"), true);
 }
 
 interface Props extends React.HTMLProps<HTMLDivElement> {
@@ -33,7 +33,7 @@ export default (props: Props) => {
             <strong>{name}</strong>
           </div>
           <div className="tooltip is-tooltip-bottom is-inline" data-tooltip={calculateTimeRange(duration.start, duration.end)}>
-            {`${duration.start} ... ${duration.end ? duration.end : "present"}`}
+            {`${duration.start} ... ${duration.end || "present"}`}
           </div>
         </div>
         <div className="column is-narrow">
