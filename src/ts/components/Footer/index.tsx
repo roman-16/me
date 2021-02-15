@@ -21,7 +21,7 @@ export default class extends React.Component<Props, State> {
             <footer className="footer">
               <div className="content has-text-centered">
                 <h3>Made with ❤️ by <Link href="mailto:rl00@gmx.at">me</Link>.</h3>
-                I know developers are curious creatures, so here's the <Link href="https://github.com/wa4-fearless-otter/me">source code</Link>.<br />
+                I know developers are curious creatures, so here's the <Link href="https://github.com/roman-16/me">source code</Link>.<br />
               </div>
             </footer>
           )}
