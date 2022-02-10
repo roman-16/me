@@ -39,7 +39,7 @@
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "8.0.5",
     "gh-pages": "^2.0.1",
-    "node-sass": "^4.11.0",
+    "node-sass": "^7.0.0",
     "react-scripts": "2.1.5",
     "typescript": "3.3.3",
     "typescript-styled-plugin": "^0.13.0"
