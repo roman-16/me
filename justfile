@@ -1,0 +1,2 @@
+start:
+  trunk serve --open

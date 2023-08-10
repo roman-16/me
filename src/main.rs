@@ -1,3 +1,6 @@
+use leptos::*;
+use me::*;
+
 fn main() {
-    println!("Hello, world!");
+    leptos::mount_to_body(|cx| view! { cx, <App/> })
 }
