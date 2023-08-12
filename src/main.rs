@@ -1,6 +1,6 @@
 use leptos::*;
-use me::*;
+use me::App;
 
 fn main() {
-    leptos::mount_to_body(|cx| view! { cx, <App/> })
+    mount_to_body(|cx| view! { cx, <App/> })
 }
