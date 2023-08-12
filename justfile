@@ -2,4 +2,4 @@ start:
   trunk serve --open
 
 build:
-  trunk build --release
+  trunk build --dist=docs/ --release
