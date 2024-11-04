@@ -1,16 +1,15 @@
 use crate::components::icon::Icon;
-use leptos::*;
+use leptos::prelude::*;
 
 #[component]
 pub fn Social(
-    cx: Scope,
     name: &'static str,
     href: &'static str,
     #[prop(optional)] target: &'static str,
 ) -> impl IntoView {
-    view! { cx,
+    view! {
         <a class="components-social" href=href target=target>
-          <Icon name=name />
+            <Icon name=name />
         </a>
     }
 }

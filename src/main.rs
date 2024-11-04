@@ -1,6 +1,8 @@
-use leptos::*;
+use leptos::prelude::*;
 use me::App;
 
 fn main() {
-    mount_to_body(|cx| view! { cx, <App/> })
+    console_error_panic_hook::set_once();
+
+    mount_to_body(|| view! { <App /> })
 }

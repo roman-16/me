@@ -18,14 +18,15 @@
       system: let
         toolchain = fenix.packages.${system}.fromToolchainFile {
           file = ./rust-toolchain.toml;
-          sha256 = "sha256-qwnTdNE6pxFTaulhZOfLb0dMiQwQWwfk42tCYEAFPHU=";
+          sha256 = "sha256-RsORFQhrtQVybYaWATQWNpUld1l0NxcUds2jd/YWPlA=";
         };
         pkgs = nixpkgs.legacyPackages.${system};
       in {
         devShells.default = pkgs.mkShell {
           packages = with pkgs; [
-            toolchain
             just
+            leptosfmt
+            toolchain
             trunk
           ];
 

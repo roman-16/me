@@ -1,8 +1,8 @@
-use leptos::*;
+use leptos::prelude::*;
 
 #[component]
-pub fn Icon(cx: Scope, name: &'static str) -> impl IntoView {
-    view! { cx,
+pub fn Icon(name: &'static str) -> impl IntoView {
+    view! {
         <svg
             width="24"
             height="24"
