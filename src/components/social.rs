@@ -1,4 +1,4 @@
-use crate::components::icon::Icon;
+use crate::components::Icon;
 use leptos::prelude::*;
 
 #[component]
