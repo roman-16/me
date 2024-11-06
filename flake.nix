@@ -26,6 +26,7 @@
           packages = with pkgs; [
             just
             leptosfmt
+            tailwindcss
             toolchain
             trunk
           ];

@@ -6,7 +6,7 @@ use leptos::prelude::*;
 #[component]
 pub fn App() -> impl IntoView {
     view! {
-        <div class="lib">
+        <div class="lib p-4">
             <div class="header">"Hi!"</div>
             <div class="introduction">"I'm "<span>"Roman"</span>", a developer with passion."</div>
             <div class="socials">
