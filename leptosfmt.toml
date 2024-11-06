@@ -5,3 +5,6 @@ newline_style = "Auto"
 attr_value_brace_style = "WhenRequired"
 macro_names = [ "leptos::view", "view" ]
 closing_tag_style = "SelfClosing"
+
+[attr_values]
+class = "Tailwind"
