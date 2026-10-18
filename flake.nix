@@ -1,11 +1,11 @@
 {
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    flake-utils.url = "github:numtide/flake-utils";
     fenix = {
       url = "github:nix-community/fenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    flake-utils.url = "github:numtide/flake-utils";
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
   };
 
   outputs = {
@@ -16,25 +16,24 @@
   }:
     flake-utils.lib.eachDefaultSystem (
       system: let
+        pkgs = nixpkgs.legacyPackages.${system};
         toolchain = fenix.packages.${system}.fromToolchainFile {
           file = ./rust-toolchain.toml;
-          sha256 = "sha256-RsORFQhrtQVybYaWATQWNpUld1l0NxcUds2jd/YWPlA=";
+          sha256 = "sha256-+xUr6Al1wZSqX8aEsq7DpuFOK4Ve/i+qTl+K5uWQ9GM=";
         };
-        pkgs = nixpkgs.legacyPackages.${system};
       in {
         devShells.default = pkgs.mkShell {
           packages = with pkgs; [
+            binaryen
+            cargo-leptos
+            gh
             just
             leptosfmt
-            tailwindcss
+            miniserve
+            tailwindcss_4
             toolchain
-            trunk
+            wasm-bindgen-cli_0_2_129
           ];
-
-          # Certain Rust tools won't work without this
-          # This can also be fixed by using oxalica/rust-overlay and specifying the rust-src extension
-          # See https://discourse.nixos.org/t/rust-src-not-found-and-other-misadventures-of-developing-rust-on-nixos/11570/3?u=samuela. for more details.
-          RUST_SRC_PATH = "${fenix.packages.${system}.complete.rust-src}/lib/rustlib/src/rust/library";
         };
       }
     );

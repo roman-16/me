@@ -1,9 +1,55 @@
-# https://doc.rust-lang.org/cargo/reference/manifest.html
 [package]
 name = "me"
 version = "1.0.0"
-edition = "2021"
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[[bin]]
+name = "me"
+path = "src/main.rs"
+required-features = ["ssr"]
 
 [dependencies]
-console_error_panic_hook = "0.1.7"
-leptos = { version = "0.7.0-gamma3", features = ["csr", "nightly"] }
+chrono = { version = "0.4.45", features = ["serde"], optional = true }
+console_error_panic_hook = { version = "0.1.7", optional = true }
+emojis = { version = "0.9.1", optional = true }
+hydration_context = { version = "0.3.2", optional = true }
+js-sys = "0.3.106"
+leptos = { version = "0.8.22", features = ["islands"] }
+leptos_meta = { version = "0.8.7", optional = true }
+serde = { version = "1.0.229", features = ["derive"], optional = true }
+serde_json = { version = "1.0.154", optional = true }
+wasm-bindgen = "=0.2.129"
+
+[features]
+hydrate = ["dep:console_error_panic_hook", "leptos/hydrate"]
+ssr = [
+    "dep:chrono",
+    "dep:emojis",
+    "dep:hydration_context",
+    "dep:leptos_meta",
+    "dep:serde",
+    "dep:serde_json",
+    "leptos/ssr",
+    "leptos_meta/ssr",
+]
+
+[profile.wasm-release]
+codegen-units = 1
+inherits = "release"
+lto = true
+opt-level = "z"
+panic = "abort"
+
+[package.metadata.leptos]
+bin-features = ["ssr"]
+hash-files = true
+lib-features = ["hydrate"]
+lib-profile-release = "wasm-release"
+output-name = "me"
+reload-port = 3001
+site-pkg-dir = "pkg"
+site-root = "target/site"
+tailwind-input-file = "style/main.css"

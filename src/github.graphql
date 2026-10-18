@@ -1,0 +1,56 @@
+query ($login: String!) {
+  user(login: $login) {
+    avatarUrl
+    company
+    contributionsCollection {
+      contributionCalendar {
+        totalContributions
+        weeks {
+          contributionDays {
+            contributionCount
+            contributionLevel
+            date
+          }
+        }
+      }
+    }
+    location
+    login
+    pinnedItems(first: 6, types: REPOSITORY) {
+      nodes {
+        ... on Repository {
+          description
+          forkCount
+          homepageUrl
+          latestRelease {
+            publishedAt
+            tagName
+            url
+          }
+          name
+          owner {
+            login
+          }
+          primaryLanguage {
+            color
+            name
+          }
+          stargazerCount
+          url
+        }
+      }
+    }
+    pullRequests(states: MERGED) {
+      totalCount
+    }
+    repositories(first: 100, isFork: false, ownerAffiliations: OWNER, privacy: PUBLIC) {
+      nodes {
+        stargazerCount
+      }
+    }
+    status {
+      emoji
+      message
+    }
+  }
+}

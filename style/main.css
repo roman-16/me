@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --animate-scuttle: scuttle 7s linear forwards;
+  --color-accent: #f87d1c;
+
+  @keyframes scuttle {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(100vw);
+    }
+  }
+}
+
+@theme inline {
+  --color-card: var(--card);
+  --color-ink: var(--ink);
+  --color-level-0: var(--level-0);
+  --color-level-1: var(--level-1);
+  --color-level-2: var(--level-2);
+  --color-level-3: var(--level-3);
+  --color-level-4: var(--level-4);
+  --color-line: var(--line);
+  --color-muted: var(--muted);
+  --color-page: var(--page);
+}
+
+:root {
+  --card: #ffffff;
+  --ink: #1c1917;
+  --level-0: #ebe8e6;
+  --level-1: #fed7aa;
+  --level-2: #fdba74;
+  --level-3: #f87d1c;
+  --level-4: #c2410c;
+  --line: #e7e5e4;
+  --muted: #57534e;
+  --page: #fafaf9;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --card: #1c1917;
+    --ink: #f5f5f4;
+    --level-0: #292524;
+    --level-1: #5a2a10;
+    --level-2: #9a3f0f;
+    --level-3: #e06a14;
+    --level-4: #fdba74;
+    --line: #292524;
+    --muted: #a8a29e;
+    --page: #0c0a09;
+  }
+}
+
+@utility glow {
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--color-accent) 18%, transparent), transparent);
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-stone-900);
+}
