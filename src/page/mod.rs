@@ -23,8 +23,6 @@ const URL: &str = "https://lerchster.dev";
 
 #[component]
 pub fn Document(options: LeptosOptions, profile: Profile) -> impl IntoView {
-    let avatar = |size| avatar_at(&profile.avatar_url, size);
-
     view! {
         <!DOCTYPE html>
         <html lang="en">
@@ -35,12 +33,13 @@ pub fn Document(options: LeptosOptions, profile: Profile) -> impl IntoView {
                 <meta name="description" content={DESCRIPTION} />
                 <meta name="theme-color" content="#f87d1c" />
                 {open_graph("og:description", DESCRIPTION.to_owned())}
-                {open_graph("og:image", avatar(460))}
+                {open_graph("og:image", avatar_at(&profile.avatar_url, 460))}
                 {open_graph("og:title", NAME.to_owned())}
                 {open_graph("og:type", "website".to_owned())}
                 {open_graph("og:url", URL.to_owned())}
-                <link rel="apple-touch-icon" href={avatar(180)} />
-                <link rel="icon" href={avatar(64)} />
+                <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+                <link rel="icon" href="/favicon.ico" sizes="32x32" />
+                <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
                 <HashedStylesheet options={options.clone()} />
                 <HydrationScripts options={options.clone()} islands=true />
                 <AutoReload options />

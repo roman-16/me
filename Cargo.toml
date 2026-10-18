@@ -44,6 +44,7 @@ opt-level = "z"
 panic = "abort"
 
 [package.metadata.leptos]
+assets-dir = "assets"
 bin-features = ["ssr"]
 hash-files = true
 lib-features = ["hydrate"]
