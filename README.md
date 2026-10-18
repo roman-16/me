@@ -16,4 +16,4 @@ Enter the dev shell with `direnv allow` or `nix develop`, then:
 
 ## Deployment
 
-The `Pages` workflow builds the site and publishes it to GitHub Pages on every push to `master`, daily at 04:00 UTC to refresh the GitHub data, and on demand via **Run workflow**.
+The `Pages` workflow builds the site and publishes it to GitHub Pages on every push to `main`, daily at 04:00 UTC to refresh the GitHub data, and on demand via **Run workflow**.
