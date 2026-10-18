@@ -18,7 +18,7 @@ use projects::Projects;
 use stats::Stats;
 
 const DESCRIPTION: &str = "Developer with passion from Austria - projects, open source and what I'm building.";
-const NAME: &str = "Roman Lerchster";
+const TITLE: &str = "Me - Roman";
 const URL: &str = "https://lerchster.dev";
 
 #[component]
@@ -29,12 +29,12 @@ pub fn Document(options: LeptosOptions, profile: Profile) -> impl IntoView {
             <head>
                 <meta charset="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <title>{NAME}</title>
+                <title>{TITLE}</title>
                 <meta name="description" content={DESCRIPTION} />
                 <meta name="theme-color" content="#f87d1c" />
                 {open_graph("og:description", DESCRIPTION.to_owned())}
                 {open_graph("og:image", avatar_at(&profile.avatar_url, 460))}
-                {open_graph("og:title", NAME.to_owned())}
+                {open_graph("og:title", TITLE.to_owned())}
                 {open_graph("og:type", "website".to_owned())}
                 {open_graph("og:url", URL.to_owned())}
                 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
